@@ -1,6 +1,5 @@
 package com.nacnez.projects.grid.modelContract;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 import com.nacnez.projects.grid.model.Address;
@@ -10,7 +9,7 @@ import com.nacnez.util.modelgen.TargetModel;
 import com.nacnez.util.modelgen.generator.rules.Alphabetic;
 import com.nacnez.util.modelgen.generator.rules.Alphanumeric;
 import com.nacnez.util.modelgen.generator.rules.DateLimit;
-import com.nacnez.util.modelgen.generator.rules.DecimalLimit;
+import com.nacnez.util.modelgen.generator.rules.DoubleLimit;
 import com.nacnez.util.modelgen.generator.rules.FromList;
 import com.nacnez.util.modelgen.generator.rules.Size;
 @TargetModel(modelClass=com.nacnez.projects.grid.model.Person.class)
@@ -37,8 +36,8 @@ public interface PersonContract extends GenerationContract {
 	@Contract(contractClass=com.nacnez.projects.grid.modelContract.AddressContract.class)
 	void setAddress(Address address);
 	
-	@DecimalLimit(lowLimit="5000.00",highLimit="5000000.00",scale=2)
-	public void setIncome(BigDecimal income);
+	@DoubleLimit(lowLimit="5000.00",highLimit="5000000.00")
+	public void setIncome(Double income);
 	
 	@FromList(fromList={"Bangalore","Calcutta","Chennai","Mumbai","New Delhi"})
 	void setCity(String city);

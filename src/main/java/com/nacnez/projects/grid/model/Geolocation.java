@@ -1,22 +1,25 @@
 package com.nacnez.projects.grid.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Geolocation {
+public class Geolocation implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	
-	private BigDecimal latitude;
-	private BigDecimal longitude;
+	private Double latitude;
+	private Double longitude;
 	
-	public BigDecimal getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(BigDecimal latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
-	public BigDecimal getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(BigDecimal longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 	

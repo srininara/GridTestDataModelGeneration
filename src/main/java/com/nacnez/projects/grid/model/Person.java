@@ -19,7 +19,7 @@ public class Person implements Serializable {
     
     private String gender;
     
-    private BigDecimal income;
+    private Double income;
     
 	private String city;
 
@@ -77,11 +77,11 @@ public class Person implements Serializable {
 		this.address = address;
 	}
 
-	public BigDecimal getIncome() {
+	public Double getIncome() {
 		return income;
 	}
 
-	public void setIncome(BigDecimal income) {
+	public void setIncome(Double income) {
 		this.income = income;
 	}
 
